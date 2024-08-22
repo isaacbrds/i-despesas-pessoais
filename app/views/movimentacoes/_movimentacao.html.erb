@@ -1,0 +1,13 @@
+<div id="<%= dom_id movimentacao %>" class="p-6 rounded-lg shadow-lg bg-white mb-2 flex <%= movimentacao.entrada? ? 'text-green-700' : 'text-red-700'%>">
+  <span class="mr-2">
+    <%=l movimentacao.data %>
+  </span>
+
+  <span class="mr-3 flex-grow">
+    <%= link_to movimentacao.descricao, movimentacao_path(movimentacao) %>
+  </span>
+
+  <span >
+    <%= number_to_currency movimentacao.valor %>
+  </span>
+</div>
